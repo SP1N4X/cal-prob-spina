@@ -32,7 +32,7 @@ async function esegui(){
     
     result = await getOddsNextMatch(url_evento)
     for(array of result){
-        if(array.prob_1 >= 0.6 || array.prob_2 >= 0.6 || array.prob_X >= 0.6){
+        if(array.prob_1 >= 0.5 || array.prob_2 >= 0.5 || array.prob_X >= 0.5){
             if(array.pred != 0){
                 document.getElementById('best_match').innerHTML += '<div style="margin-top: 1rem;"> ' + array.orario + ' ' + array.casa + ' - ' + array.ospite + ' : ' + array.pred + '</div>'
             } else {
