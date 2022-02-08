@@ -33,9 +33,9 @@ async function esegui(){
     result = await getOddsNextMatch(url_evento)
     for(array of result){
             if(array.pred != 0){
-                document.getElementById('best_match').innerHTML += '<div style="margin-top: 1rem;"> ' + array.orario + ' ' + array.casa + ' - ' + array.ospite + ' : ' + array.pred + '</div>'
+                document.getElementById('best_match').innerHTML += '<div style="margin-top: 1rem;"> ' + array.orario + ' ' + array.casa + ' - ' + array.ospite + ' : ' + array.pred + array.prob + '</div>'
             } else {
-                document.getElementById('best_match').innerHTML += '<div style="margin-top: 1rem;"> ' + array.orario + ' ' + array.casa + ' - ' + array.ospite + ' : X</div>'
+                document.getElementById('best_match').innerHTML += '<div style="margin-top: 1rem;"> ' + array.orario + ' ' + array.casa + ' - ' + array.ospite + ' : X' + array.prob + '</div>'
             }    
 
         console.log(prob_1, prob_2, prob_X)
