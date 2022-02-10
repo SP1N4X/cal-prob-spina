@@ -162,3 +162,6 @@ async function test(){
         console.log('OFFLINE')
     }
 }
+
+
+esegui()
